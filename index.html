@@ -4,19 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bijoux Élégance</title>
-  <style>
-    body { margin: 0; font-family: sans-serif; background: white; color: #111; text-align: center; }
-    header { padding: 60px 20px 30px; }
-    header h1 { font-size: 3rem; font-weight: 300; margin: 0; }
-    header p { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }
-    main { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
-    .gallery img { width: 100%; height: 80vh; object-fit: cover; cursor: pointer; transition: transform 0.3s ease; }
-    .gallery img:hover { transform: scale(1.02); }
-    footer { padding: 50px 20px; font-size: 0.8rem; color: #aaa; }
-    .fullscreen { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 999; }
-    .fullscreen img { max-width: 95%; max-height: 95%; }
-  </style>
+<style>
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #000; /* fond noir */
+    color: #fff;            /* texte blanc */
+    text-align: center;
+  }
+  header {
+    padding: 60px 20px 30px;
+  }
+  header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 0;
+    color: #fff;
+  }
+  header p {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+  }
+  .gallery img {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+  .gallery img:hover {
+    transform: scale(1.02);
+  }
+  footer {
+    padding: 50px 20px;
+    font-size: 0.8rem;
+    color: #888;
+  }
+  .fullscreen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  .fullscreen img {
+    max-width: 95%;
+    max-height: 95%;
+  }
+</style>
 </head>
 <body>
   <header>
