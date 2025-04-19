@@ -1,67 +1,52 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="fr">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bijoux Élégance</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background: white; color: #111; text-align: center; }
+    header { padding: 60px 20px 30px; }
+    header h1 { font-size: 3rem; font-weight: 300; margin: 0; }
+    header p { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }
+    main { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+    .gallery img { width: 100%; height: 80vh; object-fit: cover; cursor: pointer; transition: transform 0.3s ease; }
+    .gallery img:hover { transform: scale(1.02); }
+    footer { padding: 50px 20px; font-size: 0.8rem; color: #aaa; }
+    .fullscreen { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 999; }
+    .fullscreen img { max-width: 95%; max-height: 95%; }
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="fr"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Bijoux Élégance&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body { margin: 0; font-family: sans-serif; background: white; color: #111; text-align: center; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header { padding: 60px 20px 30px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header h1 { font-size: 3rem; font-weight: 300; margin: 0; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>header p { color: #666; font-size: 0.9rem; margin-top: 0.5rem; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>main { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.gallery img { width: 100%; height: 80vh; object-fit: cover; cursor: pointer; transition: transform 0.3s ease; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.gallery img:hover { transform: scale(1.02); }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer { padding: 50px 20px; font-size: 0.8rem; color: #aaa; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.fullscreen { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: flex; justify-content: center; align-items: center; z-index: 999; }</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.fullscreen img { max-width: 95%; max-height: 95%; }</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;Bijoux Élégance&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;L’art du bijou contemporain&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/header&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="gallery"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://source.unsplash.com/1600x900/?jewelry,1" onclick="showFullscreen(this.src)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://source.unsplash.com/1600x900/?jewelry,2" onclick="showFullscreen(this.src)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://source.unsplash.com/1600x900/?jewelry,3" onclick="showFullscreen(this.src)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://source.unsplash.com/1600x900/?jewelry,4" onclick="showFullscreen(this.src)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://source.unsplash.com/1600x900/?jewelry,5" onclick="showFullscreen(this.src)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;img src="https://source.unsplash.com/1600x900/?jewelry,6" onclick="showFullscreen(this.src)" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/main&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;p&gt;© 2025 Bijoux Élégance. Tous droits réservés.&lt;/p&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div id="fullscreen" class="fullscreen" style="display:none" onclick="hideFullscreen()"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;img id="fullscreen-img" src="" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function showFullscreen(src) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('fullscreen-img').src = src;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('fullscreen').style.display = 'flex';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function hideFullscreen() {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById('fullscreen').style.display = 'none';</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+  <header>
+    <h1>Bijoux Élégance</h1>
+    <p>L’art du bijou contemporain</p>
+  </header>
+  <main>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/1600x900/?jewelry,1" onclick="showFullscreen(this.src)" />
+      <img src="https://source.unsplash.com/1600x900/?jewelry,2" onclick="showFullscreen(this.src)" />
+      <img src="https://source.unsplash.com/1600x900/?jewelry,3" onclick="showFullscreen(this.src)" />
+      <img src="https://source.unsplash.com/1600x900/?jewelry,4" onclick="showFullscreen(this.src)" />
+      <img src="https://source.unsplash.com/1600x900/?jewelry,5" onclick="showFullscreen(this.src)" />
+      <img src="https://source.unsplash.com/1600x900/?jewelry,6" onclick="showFullscreen(this.src)" />
+    </div>
+  </main>
+  <footer>
+    <p>© 2025 Bijoux Élégance. Tous droits réservés.</p>
+  </footer>
+  <div id="fullscreen" class="fullscreen" style="display:none" onclick="hideFullscreen()">
+    <img id="fullscreen-img" src="" />
+  </div>
+  <script>
+    function showFullscreen(src) {
+      document.getElementById('fullscreen-img').src = src;
+      document.getElementById('fullscreen').style.display = 'flex';
+    }
+    function hideFullscreen() {
+      document.getElementById('fullscreen').style.display = 'none';
+    }
+  </script>
 </body>
 </html>
