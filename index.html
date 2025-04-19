@@ -3,132 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bijoux de Corse</title>
-<style>
-  body {
-    margin: 0;
-    font-family: sans-serif;
-    background-color: #000; /* fond noir */
-    color: #fff;            /* texte blanc */
-    text-align: center;
-  }
-  header {
-    padding: 60px 20px 30px;
-  }
-  header h1 {
-    font-size: 3rem;
-    font-weight: 300;
-    margin: 0;
-    color: #fff;
-  }
-  header p {
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
-  main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
-  }
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-  }
-  .gallery img {
-    width: 100%;
-    height: 80vh;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 10px;
-  }
-  .gallery img:hover {
-    transform: scale(1.02);
-  }
-  footer {
-    padding: 50px 20px;
-    font-size: 0.8rem;
-    color: #888;
-  }
-  .fullscreen {
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  .fullscreen img {
-    max-width: 95%;
-    max-height: 95%;
-  }
-  figure {
-  margin: 0;
-    
-  figcaption {
-  margin-top: 10px;
-  font-size: 1rem;
-  color: #eee;
-  font-weight: 300;
-  font-style: normal;
-  text-transform: capitalize;
-}
-</style>
+  <title>Nacres de Corse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 60px 20px 30px;
+    }
+    header img {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 300;
+      margin: 0;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+    }
+    header p {
+      color: #aaa;
+      font-size: 0.9rem;
+      margin-top: 0.5rem;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 80vh;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      filter: brightness(0.95);
+    }
+    .gallery img:hover {
+      filter: brightness(1.05);
+      transform: scale(1.02);
+    }
+    footer {
+      padding: 50px 20px;
+      font-size: 0.8rem;
+      color: #888;
+    }
+    .fullscreen {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .fullscreen img {
+      max-width: 95%;
+      max-height: 95%;
+    }
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ccc;
+      font-style: normal;
+      font-weight: 300;
+      text-transform: capitalize;
+    }
+    button.scrollTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Nacres de Corse</h1>
-    <p> Véritables bijoux fait nain d'A à C </p>
+    <p>Véritables bijoux faits main d'A à Z</p>
   </header>
   
-<main>
-  <div class="gallery">
-    <figure>
-<img src="im1.PNG" alt="Bijou 1" onclick="showFullscreen(this.src)" />
-      <figcaption>Collier perlé doré</figcaption>
-    </figure>
-    <figure>
-<img src="im2.PNG" alt="Bijou 2" onclick="showFullscreen(this.src)" />
-      <figcaption>Bague argent massif</figcaption>
-    </figure>
-    <figure>
-<img src="im3.PNG" alt="Bijou 3" onclick="showFullscreen(this.src)" />
-      <figcaption>Bague argent massif</figcaption>
-    </figure>
-        <figure>
-<img src="im4.PNG" alt="Bijou 4" onclick="showFullscreen(this.src)" />
-      <figcaption>Bague argent massif</figcaption>
-    </figure>
-        <figure>
-<img src="im5.PNG" alt="Bijou 5" onclick="showFullscreen(this.src)" />
-      <figcaption>Bague argent massif</figcaption>
-    </figure>
-        <figure>
-<img src="im6.PNG" alt="Bijou 6" onclick="showFullscreen(this.src)" />
-      <figcaption>Bague argent massif</figcaption>
-    </figure>
-        <figure>
-<img src="im7.PNG" alt="Bijou 7" onclick="showFullscreen(this.src)" />
-      <figcaption>Bague argent massif</figcaption>
-    </figure>
-    
+  <main>
+    <div class="gallery">
+      <figure data-aos="fade-up"><img src="im1.PNG" alt="Bijou 1" onclick="showFullscreen(this.src)" /><figcaption>Collier perlé doré</figcaption></figure>
+      <figure data-aos="fade-up"><img src="im2.PNG" alt="Bijou 2" onclick="showFullscreen(this.src)" /><figcaption>Bague argent massif</figcaption></figure>
+      <figure data-aos="fade-up"><img src="im3.PNG" alt="Bijou 3" onclick="showFullscreen(this.src)" /><figcaption>Bracelet nacré</figcaption></figure>
+      <figure data-aos="fade-up"><img src="im4.PNG" alt="Bijou 4" onclick="showFullscreen(this.src)" /><figcaption>Pendentif artisanal</figcaption></figure>
+      <figure data-aos="fade-up"><img src="im5.PNG" alt="Bijou 5" onclick="showFullscreen(this.src)" /><figcaption>Bague gravée</figcaption></figure>
+      <figure data-aos="fade-up"><img src="im6.PNG" alt="Bijou 6" onclick="showFullscreen(this.src)" /><figcaption>Boucles d’oreilles</figcaption></figure>
+      <figure data-aos="fade-up"><img src="im7.PNG" alt="Bijou 7" onclick="showFullscreen(this.src)" /><figcaption>Collier nacré</figcaption></figure>
+    </div>
+  </main>
 
-    
-  </div>
-</main>
-
-  
-  
   <footer>
     <p>© 2025 Nacres de Corse. Tous droits réservés.</p>
   </footer>
+
   <div id="fullscreen" class="fullscreen" style="display:none" onclick="hideFullscreen()">
     <img id="fullscreen-img" src="" />
   </div>
+
+  <button class="scrollTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
+    AOS.init();
     function showFullscreen(src) {
       document.getElementById('fullscreen-img').src = src;
       document.getElementById('fullscreen').style.display = 'flex';
